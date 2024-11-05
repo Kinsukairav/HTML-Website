@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://static.toiimg.com/photo/msid-66590601,width-96,height-65.cms');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .login-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            color: white;
+        }
+
+        .big-text {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 500px; /* Fixed width for cards */
+            text-align: left;
+            color: #333;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer i {
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+    <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+</header>
+
+<div class="container">
+    <div class="big-text">Welcome to Our Website!</div>
+    
+    <div class="card-container">
+        <!-- Famous Places in India -->
+        <div class="card">
+            <img src="https://data.1freewallpapers.com/download/india-taj-mahal-best.jpg" alt="Taj Mahal">
+            <div class="card-content">
+                <h2>Taj Mahal</h2>
+                <p>The Taj Mahal is an ivory-white marble mausoleum located in Agra, built in memory of Mumtaz Mahal by Emperor Shah Jahan.</p>
+            </div>
+        </div>
+
+        <!-- Famous Food in India -->
+        <div class="card">
+            <img src="https://holytreetravel.com/blog/IMAGE/Gateway-of-India.jpg" alt="Gateway-of-India">
+            <div class="card-content">
+                <h2>Gateway-of-India</h2>
+                <p>The Gateway of India is a grand monument located in Mumbai, symbolizing India's rich history and its colonial past. Built in 1924, it stands as a majestic arch overlooking the Arabian Sea.</p>
+            </div>
+        </div>
+
+        <!-- Famous Indian Culture -->
+        <div class="card">
+            <img src="https://2.bp.blogspot.com/-UpkPARDh_pE/U6W3pdrWEeI/AAAAAAAAAxQ/Pb9VsvhT7Ho/s1600/Thumb_22.jpg" alt="Indian Dance">
+            <div class="card-content">
+                <h2>Classical Dance</h2>
+                <p>India is known for its classical dance forms, including Bharatanatyam, Kathak, and Odissi, each with its own unique style and history.</p>
+            </div>
+        </div>
+
+        <!-- Another Famous Place -->
+        <div class="card">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/084/232/large_2x/full-picture-of-hawa-mahal-of-rajasthan-photo.jpg" alt="Hawa Mahal">
+            <div class="card-content">
+                <h2>Hawa Mahal</h2>
+                <p>Hawa Mahal, also known as the Palace of Winds, is a stunning palace in Jaipur, famous for its unique architecture and numerous windows.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 style="text-align: center; color: white;">Famous Places, Food, and Culture</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>City</th>
+                <th>Famous Item</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #ffcccb;"> <!-- Light Red for Places -->
+                <td>Place</td>
+                <td>Agra</td>
+                <td>Taj Mahal</td>
+            </tr>
+            <tr style="background-color: #ffcccb;"> <!-- Light Red for Places -->
+                <td>Place</td>
+                <td>Jaipur</td>
+                <td>Hawa Mahal</td>
+            </tr>
+            <tr style="background-color: #ffe4b5;"> <!-- Light Yellow for Food -->
+                <td>Food</td>
+                <td>Hyderabad</td>
+                <td>Biryani</td>
+            </tr>
+            <tr style="background-color: #ffe4b5;"> <!-- Light Yellow for Food -->
+                <td>Food</td>
+                <td>Delhi</td>
+                <td>Chaat</td>
+            </tr>
+            <tr style="background-color: #add8e6;"> <!-- Light Blue for Culture -->
+                <td>Culture</td>
+                <td>Varanasi</td>
+                <td>Ganga Aarti</td>
+            </tr>
+            <tr style="background-color: #add8e6;"> <!-- Light Blue for Culture -->
+                <td>Culture</td>
+                <td>Kerala</td>
+                <td>Onam Festival</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<footer>
+    <div>
+        <i class="fas fa-envelope"></i> Email: example@example.com
+    </div>
+    <div>
+        <i class="fas fa-map-marker-alt"></i> Location: 123 Main St, City
+    </div>
+    <div>
+        <i class="fas fa-phone"></i> Phone: (123) 456-7890
+    </div>
+</footer>
+</body>
+</html>
